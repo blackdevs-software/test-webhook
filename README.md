@@ -1,6 +1,10 @@
 # Github Webhooks
 
 ```bash
+# start local API to receive webhooks on port 5050
+yarn install
+node main.js
+
 # using gh cli to forward events
 export GITHUB_TOKEN=''
 

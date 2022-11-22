@@ -1,8 +1,8 @@
 {
-  "name": "test-webhook",
+  "name": "github-webhooks",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:blackdevs-software/test-webhook.git",
+  "repository": "git@github.com:juliocesarscheidt/github-webhooks.git",
   "author": "Julio Cesar <julio@blackdevs.com.br>",
   "license": "MIT",
   "dependencies": {
