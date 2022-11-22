@@ -13,7 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api/v1', router);
 
 router.post('/webhooks', (req, res) => {
-  console.log(req.body);
+  const data = req.body;
+  console.log(data);
+  const { repository, pusher, organization, sender, compare, commits, head_commit } = data;
+  
+  const commitTemplate = `commit feito no repo ${repository.full_name} com owner ${repository.owner.name}, com imagem URL ${repository.owner.avatar_url}, feito pelo usuário ${head_commit.author.name} onde adicionou ${head_commit.added.length} arquivos`;
+  console.log(commitTemplate);
+
   res.status(200).json({'status': 'ok'})
 })
 
