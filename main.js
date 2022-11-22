@@ -17,10 +17,10 @@ router.post('/webhooks', (req, res) => {
   console.log(data);
   const { repository, pusher, organization, sender, compare, commits, head_commit } = data;
   
-  const commitTemplate = `commit feito no repo ${repository.full_name} com owner ${repository.owner.name}, com imagem URL ${repository.owner.avatar_url}, feito pelo usuario ${head_commit.author.name} onde adicionou ${head_commit.added.length} arquivos, removeu ${head_commit.removed.length} arquivos e modificou ${head_commit.modified.length} arquivos`;
-  console.log(commitTemplate);
+  const commitInfo = `commit feito no repo ${repository.full_name} com owner ${repository.owner.name}, com imagem URL ${repository.owner.avatar_url}, feito pelo usuario ${head_commit.author.name} onde adicionou ${head_commit.added.length} arquivos, removeu ${head_commit.removed.length} arquivos e modificou ${head_commit.modified.length} arquivos`;
+  console.log(commitInfo);
 
-  res.status(200).json({'status': 'ok'})
+  res.status(200).json({'status': 'OK'})
 })
 
 app.listen(port, host, () => {
